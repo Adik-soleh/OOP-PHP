@@ -8,5 +8,4 @@ $person = new Person();
 $person->goodBye("Adi");
 $person->hello("Dewi");
 $person->name = "Adit";
-
-var_dump($person);
+$person->run();
