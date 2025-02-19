@@ -1,7 +1,15 @@
 <?php
 
 namespace Data;
-interface Car 
+
+interface HasBrand {
+    function getBrand(): string;
+}
+
+interface IsMainTenance {
+    function isMaintenance():bool;
+}
+interface Car extends HasBrand, IsMainTenance
 {
     function drive(): void;
 
@@ -10,9 +18,16 @@ interface Car
 
 class Avanza implements Car {
     function drive() : void {
-        echo "Drive avanza" . PHP_EOL;
+        echo "Drive : avanza" . PHP_EOL;
     }
 
+    function getBrand(): string {
+        return "Brand : Toyota" . PHP_EOL;
+    }
+
+    function isMaintenance(): bool {
+        return true ;
+    }
     function getTire(): int {
         return 4;
     }

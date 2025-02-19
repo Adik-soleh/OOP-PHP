@@ -6,6 +6,8 @@ use Data\Avanza;
 
 $car = new Avanza ();
 $car->drive();
-echo $car->getTire();
+echo $car->getBrand();
+echo "Is Maintenance : ", $car->isMaintenance() . PHP_EOL;
+echo  "Tire : ",$car->getTire();
 
 
